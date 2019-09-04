@@ -1,4 +1,4 @@
-package rlocker
+package rdlock
 
 import (
 	"github.com/gomodule/redigo/redis"

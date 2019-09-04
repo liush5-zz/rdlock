@@ -1,4 +1,4 @@
-package rlocker
+package rdlock
 
 import (
 	"github.com/gomodule/redigo/redis"
@@ -17,7 +17,7 @@ func init() {
 		IdleTimeout: 240 * time.Second,
 		Wait:        false,
 		Dial: func() (redis.Conn, error) {
-			c, err := redis.Dial("tcp", "127.0.0.1:6379",
+			c, err := redis.Dial("tcp", "0.0.0.0:6379",
 				redis.DialPassword("redis"),
 				redis.DialDatabase(10))
 			if err != nil {
